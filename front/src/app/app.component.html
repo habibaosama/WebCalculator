@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" >
+ <head>
+     <meta charset="UTF-8">
+     <!--the viewport to make website look good on all devices-->
+     <!--intial is the initial zoom level-->
+     <meta name="viewport" content ="width= device-width, initial-scale=1.0">
+     <title>My Calculator</title>
+     <link rel="stylesheet" href="app.component.css">
+ </head>
+
+ <body>
+    <section>
+        <!--div used as a container for HTML elements-->
+        <div class="container">
+          <div class="display">
+                
+             <div class="display_1">{{prevInput }}</div>
+              <div class="display_2">{{input2 || message}}</div>
+          </div>
+          <div class ="buttons">
+          
+            <button class="button"  (click)="percent()">%</button>
+            <button class="button"  (click)="clearE()">CE</button>
+            <button class="button" (click)="clear()" >C</button>
+            <button class="button" (click)="backSpace()"> ⌫</button> 
+            <button class="button" (click)="fraction()" >1/x</button>
+            <button class="button"  (click)="square()">x<sup>2</sup></button>
+            <button class="button" (click)="root()" >&radic; x</button>
+            <button class="button" (click)="operation('÷')" >&divide;</button>
+            <button class="button" (click)="display('7')" >7</button>
+            <button class="button" (click)="display('8')" >8</button>
+            <button class="button" (click)="display('9')">9</button>
+            <button class="button" (click)="operation('x')">x</button>
+            <button class="button" (click)="display('4')">4</button>
+            <button class="button" (click)="display('5')">5</button>
+            <button class="button" (click)="display('6')">6</button>
+            <button class="button" (click)="operation('-')">-</button>
+            <button class="button" (click)="display('1')">1</button>
+            <button class="button" (click)="display('2')">2</button>
+            <button class="button" (click)="display('3')">3</button>
+            <button class="button" (click)="operation('+')">+</button>
+            <button class="button" (click)="sign()">+/-</button>
+            <button class="button" (click)="display('0')">0</button>
+            <button class="button" (click)="display('.')">.</button>
+            <button id ="equal" class="button"  (click)="equal()">=</button>  <!--since i will use equal to calculate i make id for it-->
+    
+            
+        </div>
+            
+            </div>
+        
+    </section>
+
+
+
+ </body>
+
+
+</html>
